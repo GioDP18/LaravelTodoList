@@ -14,6 +14,13 @@ class TodosController extends Controller
         $todo = Todos::find($id);
         return view('components/update', compact('todo'));
     }
+    public function submitupdateTodo(Request $request, $id){
+        $todo=Todos::find($id);
+        $todo->todoName=$request->todoName;
+        $todo->status=$request->status;
+        $todo->save();
+        return redirect(route('home'));
+    }
     public function readTodos(){
         $todos = Todos::all();
         return view('components.read', ['todos' => $todos]);

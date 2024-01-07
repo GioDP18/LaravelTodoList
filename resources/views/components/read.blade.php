@@ -15,6 +15,7 @@
                 <tr>
                     <th>Todo Name</th>
                     <th>Status</th>
+                    <th>Action</th>
                 </tr>
             </thead>
             <tbody>
@@ -26,6 +27,7 @@
                     @else
                     <td><input type="checkbox" name="status" id="" disabled ></td>
                     @endif
+                    <td><a href="{{ route('update',  $todo->id) }}">Update</a></td>
 
                 </tr>
                 @endforeach
