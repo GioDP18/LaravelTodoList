@@ -15,4 +15,12 @@ class TodosController extends Controller
         $todos = Todos::all();
         return view('components.read', ['todos' => $todos]);
     }
+
+    public function deleteTodos($id)
+    {
+        Todos::where('id', $id)->delete();
+
+        return redirect()->back();
+    }
+
 }
