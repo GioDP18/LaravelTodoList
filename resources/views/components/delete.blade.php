@@ -13,25 +13,20 @@
         <table id="todos" class="display" style="width:100%" style="background-color:aqua; width:100%; height:20rem;">
             <thead>
                 <tr>
-                    <th>#</th>
                     <th>Todo Name</th>
                     <th>Status</th>
-                    <th>Action</th>
                 </tr>
             </thead>
             <tbody>
-                {{ $index = 0 }}
                 @foreach ($todos as $todo)
                 <tr>
-                    <td>{{ $index += 1 }}</td>
                     <td>{{ $todo->todoName }}</td>
                     @if ($todo->status == 1)
-                    <td><input type="checkbox" name="status" id="" checked disabled ></td>
+                        <td><input type="checkbox" name="status" checked disabled></td>
                     @else
-                    <td><input type="checkbox" name="status" id="" disabled ></td>
+                        <td><input type="checkbox" name="status" disabled></td>
                     @endif
-                    <td><a href="{{ route('update',  $todo->id) }}">Update</a></td>
-
+                    <td><a href="{{ route('deleteTodo', ['id' => $todo->id]) }}">Delete</a></td>
                 </tr>
                 @endforeach
             </tbody>

@@ -23,3 +23,7 @@ Route::get('/add', function(){
 Route::get('/update/{id}', [TodosController::class, 'updateTodo'])->name('update');
 Route::put('/submit/{id}', [TodosController::class, 'submitupdateTodo'])->name('submitupdate');
 Route::get('/', [TodosController::class, 'readTodos'])->name('home');
+
+Route::get('/delete/{id}', [TodosController::class, 'deleteTodos']);
+
+Route::get('/', [TodosController::class, 'readTodos']);
