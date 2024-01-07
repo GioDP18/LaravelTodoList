@@ -8,6 +8,10 @@ use Illuminate\Http\Request;
 class TodosController extends Controller
 {
     public function createTodo(Request $request){
-        Todos::createTodo()
+        Todos::createTodo();
+    }
+    public function updateTodo($id){
+        $todo = Todos::find($id);
+        return view('components/update', compact('todo'));
     }
 }

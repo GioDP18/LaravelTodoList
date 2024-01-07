@@ -19,3 +19,4 @@ Route::get('/', function () {
 Route::post('/add', function(){
     return view('components/create');
 });
+Route::get('/update/{id}', 'TodosController@updateTodo')->name('update');
