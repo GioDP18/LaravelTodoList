@@ -39,7 +39,11 @@
                     @else
                     <td><input type="checkbox" name="status" id="" disabled ></td>
                     @endif
-                    <td><a href="{{ route('update',  $todo->id) }}">Update</a></td>
+                    <td>
+                        <a href="{{ route('update',  $todo->id) }}">Update</a> |
+                        <a href="/delete/{{ $todo->id }}">Delete</a>
+                    </td>
+
 
                 </tr>
                 @endforeach
