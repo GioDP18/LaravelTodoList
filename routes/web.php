@@ -18,4 +18,4 @@ Route::get('/', function () {
 });
 Route::post('/add', function(){
     return view('components/create');
-})
+});
