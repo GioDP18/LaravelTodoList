@@ -22,11 +22,11 @@
                 <tr>
                     <td>{{ $todo->todoName }}</td>
                     @if ($todo->status == 1)
-                    <td><input type="checkbox" name="status" id="" checked disabled ></td>
+                        <td><input type="checkbox" name="status" checked disabled></td>
                     @else
-                    <td><input type="checkbox" name="status" id="" disabled ></td>
+                        <td><input type="checkbox" name="status" disabled></td>
                     @endif
-
+                    <td><a href="{{ route('deleteTodo', ['id' => $todo->id]) }}">Delete</a></td>
                 </tr>
                 @endforeach
             </tbody>
