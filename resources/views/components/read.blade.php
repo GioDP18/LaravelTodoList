@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="//cdn.datatables.net/1.13.7/css/jquery.dataTables.min.css">
 </head>
 <body>
-    <div>taTables.min.css">
+    <div>
         <h1>Laravel Todo List</h1>
         <table id="todos" class="display" style="width:100%" style="background-color:aqua; width:100%; height:20rem;">
             <thead>
