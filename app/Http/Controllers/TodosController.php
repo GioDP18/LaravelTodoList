@@ -19,7 +19,7 @@ class TodosController extends Controller
         $todo->todoName=$request->todoName;
         $todo->status=$request->status;
         $todo->save();
-        return redirect(route('home'));
+        return redirect('/');
     }
     public function readTodos(){
         $todos = Todos::all();

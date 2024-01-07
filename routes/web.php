@@ -25,4 +25,5 @@ Route::put('/submit/{id}', [TodosController::class, 'submitupdateTodo'])->name('
 
 
 Route::get('/delete/{id}', [TodosController::class, 'deleteTodos']);
-Route::get('/', [TodosController::class, 'readTodos'])->name('home');
+
+Route::get('/', [TodosController::class, 'readTodos']);
