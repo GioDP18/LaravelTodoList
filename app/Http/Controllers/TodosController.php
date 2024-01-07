@@ -8,6 +8,6 @@ use Illuminate\Http\Request;
 class TodosController extends Controller
 {
     public function createTodo(Request $request){
-        Todos::createTodo()
+        Todos::createTodo();
     }
 }
