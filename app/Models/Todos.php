@@ -7,10 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Todos extends Model
 {
-    protected $fillable = [
-        'id',
-        'todoName',
-        'status'
-    ];
+    protected $fillable = array('todoName','status');
     use HasFactory;
 }
