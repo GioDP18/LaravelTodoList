@@ -30,6 +30,6 @@ Route::get('/update/{id}', [TodosController::class, 'updateTodo'])->name('update
 Route::put('/submit/{id}', [TodosController::class, 'submitupdateTodo'])->name('submitupdate');
 
 
-Route::get('/delete/{id}', [TodosController::class, 'deleteTodos']);
+Route::get('/delete/{id}', [TodosController::class, 'deleteTodos'])->name('deletetodo');
 
 Route::get('/', [TodosController::class, 'readTodos']);
